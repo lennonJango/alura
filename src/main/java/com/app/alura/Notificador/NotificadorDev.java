@@ -15,6 +15,6 @@ public class NotificadorDev implements Notificador_Interface {
        
         System.out.println("MENSAGEM DE TESTE :Bem vindo ao servico Streaming "+ cliente.getNome()+" a sua subicriscao foi activa via " + cliente.getContacto() + " ao servico streaming");
 
-        // org.slf4j.Logger.log("My Message");
+       
     }
 }
