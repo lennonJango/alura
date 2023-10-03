@@ -70,7 +70,7 @@ public class Cliente {
     
     public String toString(){
 
-        return " Nome \n" + this.getNome()+ " idade \n " + this.getIdade() + " email \n" + this.getEmail() + " bairro \n" + this.getBairro(); 
+        return "Cliente: \n" +" Nome " + this.getNome()+ " idade  " + this.getIdade() + " email " + this.getEmail() + " bairro " + this.getBairro(); 
     }
     
 }

@@ -18,8 +18,6 @@ private ActivadorCliente activadorCliente;
  ClienteRouta ( ActivadorCliente activadorCliente){
 
     this.activadorCliente = activadorCliente;
-    
-
     System.out.println(this.activadorCliente);
     
  }
