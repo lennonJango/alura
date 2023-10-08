@@ -1,32 +1,30 @@
-package com.app.Model.Restaurante;
-
-import java.sql.Date;
-
+package com.app.Model;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
 
 @Entity
 public class Restaurante {
 
       @Id
-      private int id;
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+      private long id;
 
+      @Column(name = "nome_restaurante")
       private String nome;
+
+      @Column(name = "taxa_frete")
       private  double taxaFrete;
-      private Date data;
+
+
+      @Column (name = "Localizacao")
+      private String localizacao;
+
     
-
-
-      public Date getData() {
-          return data;
-      }
-
-      public void setData(Date data) {
-          this.data = data;
-      }
-
-      public int getId() {
+      public long getId() {
           return id;
       }
 
@@ -47,11 +45,14 @@ public class Restaurante {
           this.taxaFrete = taxaFrete;
       }
 
+   
+    
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + id;
+        result = prime * result + (int) (id ^ (id >>> 32));
         return result;
     }
 

@@ -1,4 +1,4 @@
-package com.app.alura.Activador_cliente.NotificadorService;
+ package com.app.alura.Activador_cliente.NotificadorService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
@@ -8,7 +8,7 @@ import com.app.alura.Activador_cliente.ActivadorClienteEvent;
 import com.app.alura.Notificador.NivelDeUrgencia;
 import com.app.alura.Notificador.Notificador_Interface;
 import com.app.alura.Notificador.TipoDeNotificador;
-import com.app.alura.Notificador.ConfigNotificador.NotificadorPropreties;
+// import com.app.alura.Notificador.ConfigNotificador.NotificadorPropreties;
 
 // Da vantagem porque tira a responsabilidade de uma classe trabalhar para tudo assim criando micro servicos
 @Component

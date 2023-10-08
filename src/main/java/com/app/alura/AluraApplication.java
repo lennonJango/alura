@@ -1,7 +1,14 @@
 package com.app.alura;
 
+import org.hibernate.annotations.Cache;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
+
+@EntityScan(basePackages = "com.app.Model") 
+@ComponentScan(basePackages = "com.app.controller")
 
 @SpringBootApplication
 public class AluraApplication {

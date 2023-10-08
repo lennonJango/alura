@@ -1,11 +1,11 @@
-package com.app.Model.Cliente;
+package com.app.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
-
 
 /*
  * Entidade da tabela cliente no mysql
@@ -15,16 +15,19 @@ import jakarta.persistence.Table;
 public class ClienteAlura {
     
     @Id
+    // Para gerar o auto_increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "nome")
     private String nome;
     @Column(name = "bairro")
     private String bairro;
+
     private String email;
     private int contacto;
     private int idade;
-
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
