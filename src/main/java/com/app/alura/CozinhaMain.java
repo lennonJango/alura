@@ -2,11 +2,10 @@ package com.app.alura;
 import java.util.List;
 
 import org.springframework.boot.WebApplicationType;
-// import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-import com.app.Model.Cozinha;
+import com.app.Modelo.Cozinha;
 import com.app.controller.CozinhaC;
 
 
@@ -20,21 +19,33 @@ public class CozinhaMain {
 
         CozinhaC controllerCoz = applicationContext.getBean(CozinhaC.class);
 
-         Cozinha c2 = new Cozinha();
-         c2.setNome("Mocambicana");
+        // System.out.println(controllerCoz.umCozinha(1).getNome());
+
+        CozinhaC c1 = new CozinhaC();
+
+        List<Cozinha> cozinhas =  c1.listar();
+
+        for ( Cozinha cozinha : cozinhas){
+
+            System.out.println(cozinha);
+        }
+
+
+        
+       
 
          
         //  System.out.println(c2.getNome());
 
-         controllerCoz.adicionar(c2);
+    //      controllerCoz.adicionar(c2);
          
 
-       List<Cozinha> cozinhas = controllerCoz.listar();
+    //    List<Cozinha> cozinhas = controllerCoz.listar();
 
 
-       for(Cozinha cozinha1 : cozinhas ){
-        System.out.println(cozinha1.getNome());
-       }
+    //    for(Cozinha cozinha1 : cozinhas ){
+    //     System.out.println(cozinha1.getNome());
+    //    }
 
     }
 

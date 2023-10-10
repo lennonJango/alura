@@ -1,17 +1,18 @@
-package com.app.Model;
-
-
-// import java.time.LocalDate;
+package com.app.Modelo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
  * Entendidade da tabela Cozinha no mysql
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "tab_cozinhas")
 public class Cozinha {
@@ -22,29 +23,6 @@ public class Cozinha {
 
     @Column (name = "nome_cozinha",unique = true)     
     private String nome;
-
-    // @Column (name = "horario")
-    // private LocalDate horData; 
-
-    public Long getId() {
-        return id;
-    }
-
-   
-
-    public String getNome() {
-        return nome;
-    }
-
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     @Override
     public int hashCode() {
