@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@EntityScan(basePackages = "com.app.Model") 
+@EntityScan(basePackages = "com.app.Modelo")
 @ComponentScan(basePackages = "com.app.controller")
 
 @SpringBootApplication

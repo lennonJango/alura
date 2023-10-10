@@ -19,16 +19,15 @@ public class CozinhaMain {
 
         CozinhaC controllerCoz = applicationContext.getBean(CozinhaC.class);
 
-        // System.out.println(controllerCoz.umCozinha(1).getNome());
+        // System.out.println(controllerCoz.buscarCozinha(1l).getNome());
 
-        CozinhaC c1 = new CozinhaC();
+       
+        // List<Cozinha> cozinhas =  controllerCoz.listar();
 
-        List<Cozinha> cozinhas =  c1.listar();
+        // for ( Cozinha cozinha : cozinhas){
 
-        for ( Cozinha cozinha : cozinhas){
-
-            System.out.println(cozinha);
-        }
+        //     System.out.println(cozinha.getNome());
+        // }
 
 
         
