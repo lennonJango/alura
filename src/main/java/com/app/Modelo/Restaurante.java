@@ -4,15 +4,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 public class Restaurante {
 
       @Id
+      @EqualsAndHashCode.Include
       @GeneratedValue(strategy = GenerationType.IDENTITY)
       private long id;
 
@@ -25,29 +28,5 @@ public class Restaurante {
 
       @Column (name = "Localizacao")
       private String localizacao;
-
-    
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (int) (id ^ (id >>> 32));
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Restaurante other = (Restaurante) obj;
-        if (id != other.id)
-            return false;
-        return true;
-    }
-
-    
+   
 }

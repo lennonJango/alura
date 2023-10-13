@@ -1,11 +1,8 @@
 package com.app.alura;
-import java.util.List;
-
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-import com.app.Modelo.Cozinha;
 import com.app.controller.CozinhaC;
 
 
@@ -30,6 +27,7 @@ public class CozinhaMain {
         // }
 
 
+       
         
        
 

@@ -38,8 +38,9 @@ public class CozinhaC implements CozinhaRepository {
     /*
      * Este metodo pode adicionar tanto como atualizar os dados usando o set
      */
-    @Transactional
+    
     @Override
+     @Transactional
     public Cozinha salvarCozinha (Cozinha cozinha){
       return manager.merge(cozinha);
     }
