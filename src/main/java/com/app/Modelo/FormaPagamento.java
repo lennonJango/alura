@@ -9,27 +9,18 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/*
- * Entidade da tabela cliente no mysql
- */
-
 @Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "Cliente")
-public class ClienteAlura {
-    
+@Table(name = "FormaPagamento")
+public class FormaPagamento {
+
     @Id
-    // Para gerar o auto_increment
-    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @EqualsAndHashCode.Include
+    private Long Id;
 
-    @Column(name = "nome")
-    private String nome;
-    @Column(name = "bairro")
-    private String bairro;
+    @Column(nullable = false, unique = true)
+    private String descricao;
 
-    private String email;
-    private int contacto;
-    private int idade;
 }

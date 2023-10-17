@@ -5,31 +5,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/*
- * Entidade da tabela cliente no mysql
- */
-
 @Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "Cliente")
-public class ClienteAlura {
-    
+@Table
+public class Cidade {
+
     @Id
-    // Para gerar o auto_increment
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long Id;
 
-    @Column(name = "nome")
+    @Column(nullable = false)
     private String nome;
-    @Column(name = "bairro")
-    private String bairro;
 
-    private String email;
-    private int contacto;
-    private int idade;
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
+
 }
