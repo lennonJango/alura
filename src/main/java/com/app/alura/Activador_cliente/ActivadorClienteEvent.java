@@ -1,19 +1,19 @@
-package com.app.alura.Activador_cliente;
-import com.app.alura.Cliente.Cliente;
+// package com.app.alura.Activador_cliente;
+// import com.app.alura.Cliente.Cliente;
 
 
-// Event handler
-public class ActivadorClienteEvent {
+// // Event handler
+// public class ActivadorClienteEvent {
 
-    protected Cliente clientes;
+//     protected Cliente clientes;
 
-    public ActivadorClienteEvent (Cliente cliente){
-        super();
-        this.clientes = cliente;
+//     public ActivadorClienteEvent (Cliente cliente){
+//         super();
+//         this.clientes = cliente;
 
-    }
+//     }
 
-    public Cliente getClientes() {
-        return clientes;
-    }
-}
+//     public Cliente getClientes() {
+//         return clientes;
+//     }
+// }

@@ -1,4 +1,4 @@
-package com.app.Modelo;
+package com.app.alura.Modelo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +14,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "tab_cozinhas")
 public class Cozinha {

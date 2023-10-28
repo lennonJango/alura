@@ -1,16 +1,19 @@
-package com.app.controller;
+package com.app.alura.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import com.app.Modelo.Estado;
-import com.app.Modelo.EstadoReposity;
+import com.app.alura.Modelo.Estado;
+import com.app.alura.Repositorio.EstadoReposity;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
+
+@Component 
 public class EstadoController implements EstadoReposity {
 
     @PersistenceContext

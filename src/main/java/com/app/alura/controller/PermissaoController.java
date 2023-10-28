@@ -1,12 +1,12 @@
-package com.app.controller;
+package com.app.alura.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.app.Modelo.Permissao;
-import com.app.Modelo.PermissaoRepository;
+import com.app.alura.Modelo.Permissao;
+import com.app.alura.Repositorio.PermissaoRepository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

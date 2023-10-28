@@ -1,6 +1,8 @@
-package com.app.Modelo;
+package com.app.alura.Repositorio;
 
-import java.util.*;;;
+import java.util.*;
+
+import com.app.alura.Modelo.FormaPagamento;;;
 
 public interface FormaPagamentoRepository {
 

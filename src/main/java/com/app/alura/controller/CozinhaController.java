@@ -1,19 +1,19 @@
-package com.app.controller;
+package com.app.alura.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.app.Modelo.Cozinha;
-import com.app.Modelo.CozinhaRepository;
+import com.app.alura.Modelo.Cozinha;
+import com.app.alura.Repositorio.CozinhaRepository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
 @Component
-public class CozinhaC implements CozinhaRepository {
+public class CozinhaController implements CozinhaRepository {
 
     // Em todas as classes controller tem que passar um manager para comunicar com o jpa
       @PersistenceContext

@@ -1,4 +1,4 @@
-package com.app.controller;
+package com.app.alura.controller;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.app.Modelo.Cidade;
-import com.app.Modelo.CidadeReposity;
+import com.app.alura.Modelo.Cidade;
+import com.app.alura.Repositorio.CidadeReposity;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

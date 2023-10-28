@@ -1,10 +1,12 @@
-package com.app.Modelo;
+package com.app.alura.Modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,16 +15,18 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table
-public class Permissao {
-    
+public class Cidade {
 
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
-    private long id;
+    @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long Id;
 
     @Column(nullable = false)
     private String nome;
-    @Column(nullable = false)
-    private String descricao;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
 
 }

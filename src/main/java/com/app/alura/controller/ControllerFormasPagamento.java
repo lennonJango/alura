@@ -1,12 +1,12 @@
-package com.app.controller;
+package com.app.alura.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.app.Modelo.FormaPagamento;
-import com.app.Modelo.FormaPagamentoRepository;
+import com.app.alura.Modelo.FormaPagamento;
+import com.app.alura.Repositorio.FormaPagamentoRepository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

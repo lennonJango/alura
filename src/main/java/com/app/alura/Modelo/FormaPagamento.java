@@ -1,4 +1,4 @@
-package com.app.Modelo;
+package com.app.alura.Modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

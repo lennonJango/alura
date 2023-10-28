@@ -1,6 +1,8 @@
-package com.app.Modelo;
+package com.app.alura.Repositorio;
 
 import java.util.List;
+
+import com.app.alura.Modelo.Cozinha;
 
 public interface CozinhaRepository {
     List<Cozinha> listar();
