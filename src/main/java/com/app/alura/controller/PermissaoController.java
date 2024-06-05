@@ -42,7 +42,7 @@ public class PermissaoController implements PermissaoRepository {
     @Override
     @Transactional
     public void apagarPermissao(long Id) {
-
+        // Nao esquecer de terminar esta section
         Permissao permissaoPorRemover = buscarPermissao(Id);
         manager.remove(permissaoPorRemover);
     }
